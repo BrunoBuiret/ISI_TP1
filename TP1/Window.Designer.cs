@@ -69,7 +69,7 @@
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(584, 260);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(584, 232);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // tabControl1
@@ -79,7 +79,7 @@
             this.tabControl1.Location = new System.Drawing.Point(3, 3);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(581, 218);
+            this.tabControl1.Size = new System.Drawing.Size(581, 190);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -88,7 +88,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(573, 192);
+            this.tabPage1.Size = new System.Drawing.Size(573, 164);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Cryptage";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -100,7 +100,7 @@
             this.flowLayoutPanel3.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel3.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(567, 186);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(567, 158);
             this.flowLayoutPanel3.TabIndex = 1;
             // 
             // tableLayoutPanel1
@@ -184,7 +184,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(573, 195);
+            this.tabPage2.Size = new System.Drawing.Size(573, 164);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Décryptage";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -194,7 +194,7 @@
             this.flowLayoutPanel2.Controls.Add(this.buttonQuit);
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 227);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 199);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(581, 30);
             this.flowLayoutPanel2.TabIndex = 1;
@@ -290,14 +290,14 @@
             this.flowLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel4.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(567, 189);
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(567, 158);
             this.flowLayoutPanel4.TabIndex = 1;
             // 
             // Window
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(584, 260);
+            this.ClientSize = new System.Drawing.Size(584, 232);
             this.Controls.Add(this.flowLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Window";
