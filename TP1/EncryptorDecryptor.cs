@@ -14,7 +14,7 @@ namespace TP1
 
         static EncryptorDecryptor()
         {
-            keyRegex = new Regex(@"[a-zA-Z]");
+            keyRegex = new Regex(@"^[a-zA-Z]+$");
         }
 
         public String encrypt(String key, String text)
@@ -53,8 +53,6 @@ namespace TP1
                         y++;
                     }
                 }
-
-                Debug.printMatrix(textMatrix, matrixHeight, key.Length);
 
                 // Transform the key into letters position
                 int[] asciiKey = new int[key.Length];
@@ -183,6 +181,29 @@ namespace TP1
                     ignoredColumns.Add(y);
                 }
 
+                // Before populating the matrix, determine if it'll be complete or not
+                if(text.Length < matrixHeight * key.Length)
+                {
+                    // If not, we need to fill in the blanks to reconstruct correctly
+                    int blanksNumber = matrixHeight * key.Length - text.Length;
+
+                    // Swap the keys and values of the column indexes to retrieve the order
+                    int[] swappedColumnIndexes = new int[key.Length];
+
+                    for(x = 0; x < key.Length; x++)
+                    {
+                        swappedColumnIndexes[columnIndexes[x]] = x;
+                    }
+
+                    for(x = 0; x < key.Length; x++)
+                    {
+                        if (swappedColumnIndexes[x] >= key.Length - blanksNumber)
+                        {
+                            text = text.Insert(x * matrixHeight + (matrixHeight - 1), "\0");
+                        }
+                    }
+                }
+
                 // Populate the text matrix
                 for(y = 0; y < matrixHeight; y++)
                 {
@@ -191,10 +212,6 @@ namespace TP1
                         textMatrix[x, y] = columnIndexes[x] * matrixHeight + y < text.Length ? text[columnIndexes[x] * matrixHeight + y] : '\0';
                     }
                 }
-
-
-
-                Debug.printMatrix(textMatrix, matrixHeight, key.Length);
 
                 // Build the encrypted string
                 StringBuilder decryptedText = new StringBuilder();
@@ -219,31 +236,6 @@ namespace TP1
         private Boolean isKeyValid(String key)
         {
             return key != "" && key.Length >= 2 && EncryptorDecryptor.keyRegex.IsMatch(key);
-        }
-    }
-
-    class Debug
-    {
-        public static void printMatrix(char[,] m, int height, int width)
-        {
-            int x, y;
-
-            for(x = 0; x < width; x++)
-            {
-                Console.Write('-');
-            }
-
-            Console.WriteLine();
-
-            for(y = 0; y < height; y++)
-            {
-                for(x = 0; x < width; x++)
-                {
-                    Console.Write(m[x, y] != '\0' ? m[x, y] : '_');
-                }
-
-                Console.WriteLine();
-            }
         }
     }
 }
