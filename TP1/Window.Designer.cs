@@ -40,8 +40,7 @@
             this.textToCrypt = new System.Windows.Forms.TextBox();
             this.encryptedText = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.buttonQuit = new System.Windows.Forms.Button();
+            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -49,23 +48,23 @@
             this.decryptingKey = new System.Windows.Forms.TextBox();
             this.textToDecrypt = new System.Windows.Forms.TextBox();
             this.decryptedText = new System.Windows.Forms.TextBox();
-            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.buttonQuit = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            this.flowLayoutPanel2.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel4.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.flowLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Controls.Add(this.tabControl1);
             this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel2);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -189,25 +188,14 @@
             this.tabPage2.Text = "Décryptage";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // flowLayoutPanel2
+            // flowLayoutPanel4
             // 
-            this.flowLayoutPanel2.Controls.Add(this.buttonQuit);
-            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 199);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(581, 30);
-            this.flowLayoutPanel2.TabIndex = 1;
-            // 
-            // buttonQuit
-            // 
-            this.buttonQuit.Location = new System.Drawing.Point(503, 3);
-            this.buttonQuit.Name = "buttonQuit";
-            this.buttonQuit.Size = new System.Drawing.Size(75, 23);
-            this.buttonQuit.TabIndex = 0;
-            this.buttonQuit.Text = "Quitter";
-            this.buttonQuit.UseVisualStyleBackColor = true;
-            this.buttonQuit.Click += new System.EventHandler(this.OnButtonQuitClick);
+            this.flowLayoutPanel4.Controls.Add(this.tableLayoutPanel2);
+            this.flowLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel4.Location = new System.Drawing.Point(3, 3);
+            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(567, 158);
+            this.flowLayoutPanel4.TabIndex = 1;
             // 
             // tableLayoutPanel2
             // 
@@ -284,14 +272,25 @@
             this.decryptedText.Size = new System.Drawing.Size(458, 60);
             this.decryptedText.TabIndex = 5;
             // 
-            // flowLayoutPanel4
+            // flowLayoutPanel2
             // 
-            this.flowLayoutPanel4.Controls.Add(this.tableLayoutPanel2);
-            this.flowLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel4.Location = new System.Drawing.Point(3, 3);
-            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(567, 158);
-            this.flowLayoutPanel4.TabIndex = 1;
+            this.flowLayoutPanel2.Controls.Add(this.buttonQuit);
+            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 199);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(581, 30);
+            this.flowLayoutPanel2.TabIndex = 1;
+            // 
+            // buttonQuit
+            // 
+            this.buttonQuit.Location = new System.Drawing.Point(503, 3);
+            this.buttonQuit.Name = "buttonQuit";
+            this.buttonQuit.Size = new System.Drawing.Size(75, 23);
+            this.buttonQuit.TabIndex = 0;
+            this.buttonQuit.Text = "Quitter";
+            this.buttonQuit.UseVisualStyleBackColor = true;
+            this.buttonQuit.Click += new System.EventHandler(this.OnButtonQuitClick);
             // 
             // Window
             // 
@@ -310,10 +309,10 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
-            this.flowLayoutPanel2.ResumeLayout(false);
+            this.flowLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
-            this.flowLayoutPanel4.ResumeLayout(false);
+            this.flowLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
